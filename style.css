@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, black, blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container {
+    height: 40rem;
+    width: 36rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 25px black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.textsnake,
+.textgame {
+    color: yellow;
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-shadow: 
+        6px 6px 12px rgba(0, 0, 0, 0.9), 
+        8px 8px 16px rgba(0, 0, 0, 0.8);
+    animation: shadowPulse 2s infinite alternate;
+}
+
+@keyframes shadowPulse {
+    from {
+        text-shadow: 
+            6px 6px 12px rgba(0, 0, 0, 0.9), 
+            8px 8px 16px rgba(0, 0, 0, 0.8);
+    }
+    to {
+        text-shadow: 
+            8px 8px 16px rgba(0, 0, 0, 0.9), 
+            10px 10px 20px rgba(0, 0, 0, 0.8);
+    }
+}
+
+
+
+.score-container {
+    height: 4rem;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.game-container {
+    flex: 1;
+    display: grid;
+    grid-template: repeat(25, 1fr) / repeat(25, 1fr);
+    background: white;
+}
+
+
+.food {
+    background: radial-gradient(circle at center, #28a745, #218838);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.6);
+}
+
+.snake {
+    background: linear-gradient(135deg, #ff4d4f, #d32f2f);
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px black;
+}
+
+.head {
+    background: linear-gradient(135deg, #ff6f61, #c62828);
+    border-radius: 30% 30% 50% 50%; 
+    transform: scale(1.1); 
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+ 
+}
+
+.eye {
+    width: 6px;
+    height: 6px;
+    background: #111;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+}
+
+.left-eye {
+    left: 6px;
+}
+
+.right-eye {
+    right: 6px;
+}
+
+
+
+
+
